@@ -7,7 +7,7 @@ $mysqli = new mysqli("localhost", "root", "root");
 $mysqli->select_db("dindincred");
 
 $alfabeto = "A";
-while($alfabeto != "Z") {
+while($alfabeto != "AA") {
     $sql = "Select count(*) total from email Where nome like '{$alfabeto}%' and status = 1";
     $result = $mysqli->query($sql);
     $row = $result->fetch_array(MYSQLI_ASSOC);
